@@ -17,7 +17,7 @@
   },
 
   "migrations": [
-    { "tag": "v1", "new_classes": ["FormForMCP"] }
+    { "tag": "v1", "new_sqlite_classes": ["FormForMCP"] }
   ],
 
   "d1_databases": [
