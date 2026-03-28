@@ -1,0 +1,41 @@
+{
+  "name": "formfor-mcp-dev",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-12-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "account_id": "e2c9db1c1bc377b0d70d11e5e70b437f",
+
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+
+  "durable_objects": {
+    "bindings": [
+      { "name": "MCP_AGENT", "class_name": "FormForMCP" }
+    ]
+  },
+
+  "migrations": [
+    { "tag": "v1", "new_classes": ["FormForMCP"] }
+  ],
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "formfor-db-dev",
+      "database_id": "4c6008d6-4472-46da-b130-841993d70a5d"
+    }
+  ],
+
+  "services": [
+    {
+      "binding": "API",
+      "service": "formfor-api-dev"
+    },
+    {
+      "binding": "AGENTS",
+      "service": "formfor-agents-dev"
+    }
+  ]
+}
